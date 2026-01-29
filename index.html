@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPmation Domains</title>
+
+<style>
+:root {
+  --bg: #0e0f12;
+  --panel: #14161b;
+  --border: rgba(255,255,255,0.06);
+  --text-main: #f1f1f1;
+  --text-sub: #a6a6a6;
+  --accent: #c9b88a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Inter",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 880px;
+  padding: 4.5rem 1.5rem 4.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+header h1 {
+  font-family:
+    "Iowan Old Style",
+    "Libre Baskerville",
+    "Times New Roman",
+    serif;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  color: var(--accent);
+}
+
+.domains {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.domain {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.domain-header {
+  padding: 2.2rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.domain-name {
+  font-family:
+    "Iowan Old Style",
+    "Libre Baskerville",
+    "Times New Roman",
+    serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.domain-body {
+  padding: 2.2rem 2.5rem;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  row-gap: 1.3rem;
+  column-gap: 1.8rem;
+}
+
+.meta-label {
+  color: var(--text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+}
+
+.meta-value {
+  color: var(--text-main);
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 1rem 1.2rem;
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  letter-spacing: 0.1em;
+}
+
+.footer-text {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .meta {
+    grid-template-columns: 1fr;
+  }
+
+  .meta-label {
+    margin-top: 1rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main>
+  <div class="wrapper">
+
+    <header>
+      <h1>IPmation Domains</h1>
+    </header>
+
+    <section class="domains">
+
+      <article class="domain">
+        <div class="domain-header">
+          <div class="domain-name">ipmation.com</div>
+        </div>
+        <div class="domain-body">
+          <div class="meta">
+            <div class="meta-label">Nameservers</div>
+            <div class="meta-value">
+              ELOISE.NS.CLOUDFLARE.COM<br>
+              KAREEM.NS.CLOUDFLARE.COM
+            </div>
+
+            <div class="meta-label">IP Address</div>
+            <div class="meta-value">172.67.216.33</div>
+
+            <div class="meta-label">ISO-3166 Code</div>
+            <div class="meta-value">US</div>
+
+            <div class="meta-label">Registrar</div>
+            <div class="meta-value">NameSilo, LLC</div>
+
+            <div class="meta-label">Registry Domain ID</div>
+            <div class="meta-value">3062129092_DOMAIN_COM-VRSN</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="domain">
+        <div class="domain-header">
+          <div class="domain-name">郭.top</div>
+        </div>
+        <div class="domain-body">
+          <div class="meta">
+            <div class="meta-label">Name (Punycode)</div>
+            <div class="meta-value">xn--ng4a.top</div>
+
+            <div class="meta-label">Nameservers</div>
+            <div class="meta-value">
+              eloise.ns.cloudflare.com<br>
+              kareem.ns.cloudflare.com
+            </div>
+
+            <div class="meta-label">IP Address</div>
+            <div class="meta-value">172.67.200.154</div>
+
+            <div class="meta-label">ISO-3166 Code</div>
+            <div class="meta-value">US</div>
+
+            <div class="meta-label">Registrar</div>
+            <div class="meta-value">GoDaddy.com, LLC</div>
+
+            <div class="meta-label">Registry Domain ID</div>
+            <div class="meta-value">D20251130G10001G_62583925-top</div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-text">
+    Copyright © <span id="year"></span> IPmation™
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
